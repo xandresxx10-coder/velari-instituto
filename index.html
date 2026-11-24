@@ -1,299 +1,221 @@
 <!doctype html>
 <html lang="es">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Instituto de Belleza Velari</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Instituto de Belleza Velari en Ciudad Bolívar, Bogotá. Programas técnicos de Barbería, Manicure y Peluquería.">
+<meta name="description" content="Instituto de Belleza Velari en Ciudad Bolívar, Bogotá. Programas técnicos de Manicure, Barbería y Peluquería. Tu talento, tu mejor inversión.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@500;600;700;800&display=swap">
 <style>
-
-/* Layout: una columna en celular, hero con logo y dos arcos de fotos, secciones con filete dorado; marca azul rey y oro, un solo look */
+/* Identidad del Instituto: azul marino, oro y tarjetas redondeadas como su portada. Titular grueso + cursiva dorada. */
 :root{
-  --bg:#030a52;
-  --bg-2:#071478;
-  --bg-3:#0a1c9c;
-  --panel:rgba(255,255,255,.06);
-  --line:rgba(227,185,95,.38);
-  --gold:#e3b95f;
-  --gold-hi:#fbe9b0;
-  --gold-lo:#a8781f;
-  --ink-on-gold:#05124f;
-  --text:#f3f5ff;
-  --muted:#b4bcec;
-  --ok:#2fd27a;
-  --display:"Cinzel",Georgia,serif;
-  --accent:"Cormorant Garamond",Georgia,serif;
-  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --navy:#07124a; --navy-2:#0c1c6b; --navy-3:#13298f;
+  --gold:#e8b94f; --gold-hi:#fbe3a0; --gold-lo:#b8841f;
+  --white:#ffffff; --ink:#0a1240; --mist:#c9d1f5; --soft:#f4f1e8;
+  --line:rgba(232,185,79,.45);
+  --head:"Montserrat",system-ui,sans-serif; --script:"Dancing Script","Segoe Script",cursive;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--bg);color:var(--text);font:400 16px/1.55 var(--body);
-  background-image:radial-gradient(900px 600px at 50% -10%,var(--bg-3) 0%,transparent 70%),radial-gradient(700px 500px at 100% 40%,rgba(10,28,156,.55) 0%,transparent 70%);
-  background-attachment:scroll;
-  padding-left:max(16px,env(safe-area-inset-left,0px));
-  padding-right:max(16px,env(safe-area-inset-right,0px));
-  padding-block:0 96px;
-}
+body{margin:0;background:var(--navy);color:var(--white);font:500 16px/1.55 var(--head);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-bottom:92px}
 img{display:block;max-width:100%}
 a{color:inherit}
-.wrap{max-width:1080px;margin-inline:auto}
-.gold-text{background:linear-gradient(180deg,var(--gold-hi) 0%,var(--gold) 52%,var(--gold-lo) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.eyebrow{font:600 12px/1 var(--body);letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
-h1,h2,h3{margin:0;text-wrap:balance}
-h2{font:700 clamp(26px,5.2vw,40px)/1.1 var(--display);letter-spacing:.03em}
-.lead{color:var(--muted);max-width:60ch}
-section{padding-block:56px 8px}
-.sec-head{display:grid;gap:14px;margin-bottom:28px}
-.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);border:0;margin:0}
-
-/* botones */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:999px;text-decoration:none;font:700 16px/1 var(--body);letter-spacing:.02em;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;border:1.5px solid transparent;cursor:pointer}
+.wrap{max-width:1120px;margin-inline:auto}
+.gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold) 55%,var(--gold-lo));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:14px;text-decoration:none;font:800 15px/1 var(--head);letter-spacing:.06em;text-transform:uppercase;border:2px solid transparent;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px)}
 .btn:focus-visible{outline:3px solid var(--gold-hi);outline-offset:3px}
-.btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold) 55%,#c9973a);color:var(--ink-on-gold);box-shadow:0 10px 30px rgba(227,185,95,.28)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(227,185,95,.4)}
-.btn-line{border-color:var(--line);color:var(--gold-hi);background:rgba(3,10,82,.4)}
-.btn-line:hover{background:rgba(227,185,95,.12);transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:var(--ink);box-shadow:0 10px 28px rgba(232,185,79,.3)}
+.btn-line{border-color:var(--gold);color:var(--gold-hi)}
 .btn svg{width:20px;height:20px;flex:none}
 
-/* HERO */
-.hero{padding-block:max(28px,env(safe-area-inset-top,0px)) 24px;text-align:center;position:relative}
-.topbar{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-hi);background:rgba(3,10,82,.55)}
-.pill i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(47,210,122,.18)}
-.logo{width:min(360px,72vw);height:auto;margin:10px auto 14px;filter:drop-shadow(0 14px 30px rgba(0,0,0,.45))}
-.slogan{font:italic 600 clamp(26px,6vw,44px)/1.1 var(--accent);color:var(--text);margin:6px 0 10px}
-.sub{font:600 13px/1.5 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-.cta-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:26px 0 8px}
-.free-note{color:var(--muted);font-size:14px;margin:10px 0 0}
+/* barra superior */
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:max(16px,env(safe-area-inset-top,0px)) 14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:52px;height:52px;border-radius:50%}
+.brand b{display:block;font:800 13px/1.1 var(--head);letter-spacing:.14em;text-transform:uppercase}
+.brand span{display:block;font:600 11px/1.2 var(--head);letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+.bar .btn{min-height:44px;padding:10px 18px;font-size:12px}
 
-.arches{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;max-width:640px;margin:34px auto 0}
-.arch{position:relative;border-radius:999px 999px 18px 18px;overflow:hidden;border:1.5px solid var(--gold);aspect-ratio:3/4;background:var(--bg-2)}
-.arch img{width:100%;height:100%;object-fit:cover}
-.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(3,10,82,.92))}
-.arch span{position:absolute;left:0;right:0;bottom:16px;z-index:1;font:700 14px/1 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-hi)}
-.arch:nth-child(2){margin-top:28px}
+/* HERO */
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:34px;padding-block:28px 40px;align-items:center}
+.crown{width:54px;color:var(--gold);margin-bottom:6px}
+.wm small{display:block;font:700 15px/1 var(--head);letter-spacing:.34em;text-transform:uppercase;color:var(--white)}
+.wm b{display:block;font:800 clamp(52px,12vw,92px)/.95 var(--head);letter-spacing:.06em}
+.rule-gold{width:100%;max-width:340px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:14px 0 18px}
+h1{margin:0;font:800 clamp(34px,8vw,58px)/1 var(--head);letter-spacing:.02em;text-transform:uppercase}
+.script{font:700 clamp(34px,8vw,58px)/1 var(--script);color:var(--gold);margin:6px 0 18px}
+.lead{color:var(--mist);max-width:46ch;margin:0 0 24px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+
+.programas-cover{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.pc{border:1.5px solid var(--line);border-radius:22px;overflow:hidden;background:var(--navy-2);display:grid}
+.pc img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.pc div{padding:12px 6px 14px;text-align:center;font:800 12px/1.1 var(--head);letter-spacing:.1em;text-transform:uppercase;background:linear-gradient(180deg,var(--navy-2),var(--navy))}
+.ring{width:42px;height:42px;margin:-34px auto 8px;border-radius:50%;border:1.5px solid var(--gold);background:var(--navy);display:grid;place-items:center;position:relative;z-index:1}
+.ring svg{width:22px;height:22px;color:var(--gold)}
+.tag-programas{justify-self:center;margin:0 0 -4px;padding:8px 22px;border-radius:999px;background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:var(--ink);font:800 13px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;display:inline-block}
+.right{display:grid;gap:14px;justify-items:center}
+
+/* PILARES */
+.pilares{background:var(--soft);color:var(--ink);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:34px max(16px,env(safe-area-inset-left,0px))}
+.pilares .wrap{display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}
+.pilar{display:flex;gap:16px;align-items:center}
+.pilar svg{width:48px;height:48px;flex:none;color:var(--navy-3)}
+.pilar b{display:block;font:800 15px/1.2 var(--head);letter-spacing:.08em;text-transform:uppercase}
+.pilar span{font:500 14px/1.4 var(--head);color:#3b4380}
+
+section.s{padding-block:60px 6px}
+.eyebrow{font:700 12px/1 var(--head);letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+h2{margin:12px 0 0;font:800 clamp(28px,6vw,42px)/1.1 var(--head);text-transform:uppercase;letter-spacing:.02em;text-wrap:balance}
+h2 em{font:700 1.15em/1 var(--script);color:var(--gold);text-transform:none;letter-spacing:0}
+.head{margin-bottom:28px}
 
 /* PROGRAMAS */
-.progs{display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}
-.prog{display:grid;grid-template-columns:minmax(0,1fr);gap:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02))}
-.prog img{width:100%;height:auto;aspect-ratio:1199/1312;object-fit:cover}
-.prog-body{padding:22px 22px 26px;display:grid;gap:14px;align-content:start}
-.prog h3{font:700 24px/1.1 var(--display);letter-spacing:.03em}
-.ticks{list-style:none;margin:0;padding:0;display:grid;gap:9px}
-.ticks li{display:flex;gap:11px;align-items:flex-start;color:var(--text)}
-.ticks li::before{content:"";flex:none;width:18px;height:18px;margin-top:2px;border-radius:50%;background:linear-gradient(180deg,var(--gold-hi),var(--gold-lo));-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.6 7.9l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.6 7.9l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat}
-.meta{display:flex;flex-wrap:wrap;gap:8px}
-.chip{padding:7px 12px;border-radius:999px;background:var(--panel);border:1px solid rgba(255,255,255,.12);font:600 13px/1 var(--body);color:var(--muted)}
-
-/* PRECIOS */
-.plans{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
-.plan{border:1px solid var(--line);border-radius:20px;padding:24px;background:var(--panel);display:grid;gap:10px;align-content:start;position:relative}
-.plan.hl{background:linear-gradient(180deg,rgba(251,233,176,.16),rgba(227,185,95,.06));border-color:var(--gold)}
-.tag{position:absolute;top:-13px;left:22px;padding:6px 12px;border-radius:999px;background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:var(--ink-on-gold);font:700 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
-.plan h3{font:700 19px/1.15 var(--display);letter-spacing:.04em}
-.plan .when{color:var(--muted);font-size:14px}
-.price{font:700 40px/1 var(--display);font-variant-numeric:tabular-nums}
-.price small{font:500 14px/1 var(--body);color:var(--muted);letter-spacing:0}
-.mat{display:flex;justify-content:space-between;gap:10px;border-top:1px solid rgba(255,255,255,.12);padding-top:12px;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
-.mat b{color:var(--text)}
-.clear{margin-top:22px;padding:18px 20px;border-radius:16px;border:1px dashed var(--line);color:var(--text);background:rgba(3,10,82,.5)}
-.clear b{color:var(--gold-hi)}
-.extras{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.progs{display:grid;gap:20px;grid-template-columns:minmax(0,1fr)}
+.prog{border:1.5px solid var(--line);border-radius:26px;overflow:hidden;background:linear-gradient(180deg,var(--navy-2),var(--navy));display:grid;grid-template-columns:minmax(0,1fr)}
+.prog img{width:100%;height:auto;aspect-ratio:4/3.4;object-fit:cover}
+.prog .b{padding:22px 22px 26px;display:grid;gap:12px}
+.prog h3{margin:0;font:800 24px/1.1 var(--head);letter-spacing:.06em;text-transform:uppercase}
+.prog p{margin:0;color:var(--mist)}
 
 /* PASOS */
-.steps{display:grid;gap:16px;grid-template-columns:minmax(0,1fr);counter-reset:s}
-.step{display:flex;gap:18px;align-items:flex-start;padding:20px;border-radius:18px;background:var(--panel);border:1px solid rgba(255,255,255,.1)}
-.step::before{counter-increment:s;content:counter(s);flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:700 20px/1 var(--display);color:var(--ink-on-gold);background:linear-gradient(180deg,var(--gold-hi),var(--gold))}
-.step h3{font:700 17px/1.2 var(--display);letter-spacing:.04em;margin-bottom:4px}
-.step p{margin:0;color:var(--muted)}
+.steps{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.step{padding:24px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.step i{font:700 40px/1 var(--script);color:var(--gold);font-style:normal}
+.step h3{margin:6px 0 6px;font:800 17px/1.2 var(--head);letter-spacing:.06em;text-transform:uppercase}
+.step p{margin:0;color:var(--mist)}
+
+/* BANDA */
+.band{margin-top:60px;border-radius:28px;border:1.5px solid var(--line);padding:34px 24px;text-align:center;background:radial-gradient(500px 200px at 50% 0%,rgba(232,185,79,.18),transparent 70%),var(--navy-2)}
+.band h2{margin-top:0}
+.band .num{font:800 clamp(34px,9vw,60px)/1 var(--head);letter-spacing:.04em;margin:14px 0 20px;font-variant-numeric:tabular-nums}
 
 /* SEDE */
-.sede{display:grid;gap:22px;grid-template-columns:minmax(0,1fr);align-items:center}
-.sede img{height:auto;border-radius:22px;border:1px solid var(--line);width:100%;max-height:560px;object-fit:cover}
-.info{display:grid;gap:16px}
+.sede{display:grid;gap:18px;grid-template-columns:minmax(0,1fr)}
+.card{padding:26px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.05);display:grid;gap:16px;align-content:start}
 .row{display:flex;gap:14px;align-items:flex-start}
 .row svg{width:24px;height:24px;flex:none;color:var(--gold);margin-top:2px}
-.row b{display:block;color:var(--gold-hi);font:600 12px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;margin-bottom:6px}
-.gratis-img{height:auto;border-radius:22px;border:1px solid var(--line);margin-top:28px}
+.row b{display:block;font:700 12px/1 var(--head);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:6px}
+.socials{display:grid;gap:12px}
+.social{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.05);text-decoration:none;transition:background .15s}
+.social:hover{background:rgba(232,185,79,.12)}
+.social b{font:800 15px/1.2 var(--head);letter-spacing:.08em;text-transform:uppercase;color:var(--gold-hi)}
+.social span{color:var(--mist);font-size:14px;overflow-wrap:anywhere}
 
-/* REDES */
-.socials{display:flex;flex-wrap:wrap;gap:12px}
-.social{flex:1 1 200px;display:flex;flex-direction:column;gap:4px;padding:18px 20px;border-radius:18px;border:1px solid var(--line);background:var(--panel);text-decoration:none;transition:transform .15s ease,background .15s ease}
-.social:hover{transform:translateY(-2px);background:rgba(227,185,95,.1)}
-.social b{font:700 16px/1.2 var(--display);letter-spacing:.05em;color:var(--gold-hi)}
-.social span{color:var(--muted);font-size:14px;overflow-wrap:anywhere}
-
-/* PIE */
-footer{margin-top:56px;padding-block:34px 10px;text-align:center;color:var(--muted);font-size:13px}
-footer .f-logo{width:150px;margin:0 auto 14px;opacity:.95}
+footer{margin-top:56px;padding-block:30px 8px;text-align:center;color:var(--mist);font-size:13px;border-top:1px solid rgba(255,255,255,.12)}
+footer img{width:84px;height:84px;margin:0 auto 12px;border-radius:50%}
 footer p{margin:4px 0}
 
-/* BARRA FIJA */
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:center;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:linear-gradient(180deg,transparent,rgba(3,10,82,.94) 40%)}
-.dock .btn{width:100%;max-width:520px;box-shadow:0 12px 34px rgba(0,0,0,.45),0 10px 30px rgba(227,185,95,.3)}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:center;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:linear-gradient(180deg,transparent,rgba(7,18,74,.95) 45%)}
+.dock .btn{width:100%;max-width:520px;box-shadow:0 12px 34px rgba(0,0,0,.5),0 10px 28px rgba(232,185,79,.3)}
 
-@media (min-width:760px){
-  body{padding-block:0 110px}
-  .progs{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .plans{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (min-width:860px){
+  .hero{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;padding-block:44px 60px}
+  .pilares .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .progs{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .prog img{aspect-ratio:3/3.6;height:auto}
   .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .step{flex-direction:column}
-  .sede{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px}
-  section{padding-block:80px 8px}
-  .arches{gap:22px}
+  .sede{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+  section.s{padding-block:84px 6px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-
-.kicker{font:600 13px/1 var(--body);letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin:4px 0 6px}
-.arches.three{grid-template-columns:repeat(3,minmax(0,1fr));max-width:820px;gap:12px}
-.arches.three .arch:nth-child(2){margin-top:0}
-.arches.three .arch:nth-child(odd){margin-top:26px}
-.arches.three .arch span{font-size:12px;bottom:14px}
-.pillars{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
-.pillar{padding:26px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));display:grid;gap:10px;align-content:start}
-.pillar .ico{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:700 20px/1 var(--display);color:var(--ink-on-gold);background:linear-gradient(180deg,var(--gold-hi),var(--gold))}
-.pillar h3{font:700 19px/1.15 var(--display);letter-spacing:.03em}
-.pillar p{margin:0;color:var(--muted)}
-.progs.three{grid-template-columns:minmax(0,1fr)}
-.prog-img{aspect-ratio:3/4;overflow:hidden}
-.prog-img img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
-.prog-body p{margin:0;color:var(--muted)}
-.card-info{max-width:640px;padding:26px;border-radius:22px;border:1px solid var(--line);background:var(--panel)}
-@media (min-width:760px){
-  .pillars{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .progs.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-}
 </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="bar">
+    <a class="brand" href="#top"><img src="assets/emblema.png" alt="Escudo del Instituto de Belleza Velari" width="52" height="52"><div><b>Instituto de Belleza</b><span>Velari · Ciudad Bolívar</span></div></a>
+    <a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20inscribirme%20en%20el%20Instituto%20de%20Belleza%20Velari" target="_blank" rel="noopener">Inscríbete</a>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="left">
+      <svg class="crown" viewBox="0 0 64 40" fill="currentColor" aria-hidden="true"><path d="M4 34 0 8l14 12L32 2l18 18L64 8l-4 26Zm4 4h48v2H8Z"/></svg>
+      <div class="wm"><small>Instituto de Belleza</small><b class="gold">VELARI</b></div>
+      <div class="rule-gold"></div>
+      <h1>Tu talento</h1>
+      <div class="script">tu mejor inversión</div>
+      <p class="lead">Programas técnicos de Manicure, Barbería y Peluquería en Ciudad Bolívar. Aprende un oficio y conviértelo en tu futuro.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20inscribirme%20en%20el%20Instituto%20de%20Belleza%20Velari" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.700 6.700 0 0 1-3.300-2.900c-.2-.4.2-.4.7-1.300.1-.2 0-.3 0-.4l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.200 5.200 5.200 0 0 0 1.100 2.700 11.900 11.900 0 0 0 4.600 4c1.700.7 2.400.8 3.200.7a2.700 2.700 0 0 0 1.800-1.300 2.200 2.200 0 0 0 .2-1.300c-.1-.1-.2-.2-.5-.3Z"/></svg>
+          Inscríbete ahora
+        </a>
+        <a class="btn btn-line" href="#sede">Cómo llegar</a>
+      </div>
+    </div>
+
+    <div class="right">
+      <span class="tag-programas">Nuestros programas</span>
+      <div class="programas-cover">
+        <div class="pc"><img src="assets/manicure.jpg" alt="Programa de Manicure" width="640" height="857"><div><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v4H9zM8 7h8v3a4 4 0 0 1 0 0v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-8Z"/></svg></span>Manicure</div></div>
+        <div class="pc"><img src="assets/barberia.jpg" alt="Programa de Barbería" width="640" height="857"><div><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="18" rx="3"/><path d="M9 8l6 3M9 12l6 3"/></svg></span>Barbería</div></div>
+        <div class="pc"><img src="assets/peluqueria.jpg" alt="Programa de Peluquería" width="640" height="857"><div><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="2.500"/><circle cx="6" cy="17" r="2.500"/><path d="M8 8.500 20 18M8 15.500 20 6"/></svg></span>Peluquería</div></div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="pilares">
+  <div class="wrap">
+    <div class="pilar"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18 24 8l20 10-20 10Z"/><path d="M12 22v10c0 3 6 6 12 6s12-3 12-6V22M44 18v12"/></svg><div><b>Formación de calidad</b><span>Programas técnicos con acompañamiento.</span></div></div>
+    <div class="pilar"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="18" r="11"/><path d="m24 13 1.800 3.700 4 .6-2.900 2.800.7 4L24 22.200 20.400 24l.7-4-2.900-2.800 4-.6ZM17 28l-4 16 11-5 11 5-4-16"/></svg><div><b>Práctica profesional</b><span>Aprendes haciendo, con herramientas reales.</span></div></div>
+    <div class="pilar"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 40h36M10 40V28M20 40V20M30 40V24M40 40V10M30 10h10v10"/></svg><div><b>Oportunidad de emprendimiento</b><span>Tu talento puede ser tu propio ingreso.</span></div></div>
+  </div>
+</div>
 
 <div class="wrap">
 
-  <header class="hero">
-    <div class="topbar">
-      <span class="pill"><i></i>Sede Ciudad Bolívar · Bogotá</span>
-    </div>
-    <img class="logo" src="assets/logo.png" alt="Velari, formación, belleza, futuro" width="360" height="326">
-    <div class="kicker">Instituto de Belleza</div>
-    <h1 class="slogan">Tu talento, tu mejor inversión</h1>
-    <div class="sub">Barbería · Manicure · Peluquería</div>
-    <div class="cta-row">
-      <a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20inscribirme%20en%20el%20Instituto%20de%20Belleza%20Velari" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.700 6.700 0 0 1-3.300-2.900c-.2-.4.2-.4.7-1.300.1-.2 0-.3 0-.4l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.200 5.200 5.200 0 0 0 1.100 2.700 11.900 11.900 0 0 0 4.600 4c1.700.7 2.400.8 3.200.7a2.700 2.700 0 0 0 1.800-1.300 2.200 2.200 0 0 0 .2-1.300c-.1-.1-.2-.2-.5-.3Z"/></svg>
-        Inscríbete por WhatsApp
-      </a>
-      <a class="btn btn-line" href="#sede">Cómo llegar</a>
-    </div>
-    <p class="free-note">Te asesoramos con el programa, los horarios y los valores.</p>
-
-    <div class="arches three">
-      <figure class="arch" style="margin:0"><img src="assets/hero-barberia.jpg" alt="Estudiante de barbería con uniforme azul rey cortando el cabello" width="560" height="720"><span>Barbería</span></figure>
-      <figure class="arch" style="margin:0"><img src="assets/hero-unas.jpg" alt="Estudiante de manicure mostrando uñas decoradas con detalles dorados" width="560" height="720"><span>Manicure</span></figure>
-      <figure class="arch" style="margin:0"><img src="assets/peluqueria.jpg" alt="Estilista con uniforme azul rey peinando a una clienta en un salón de lujo" width="560" height="720"><span>Peluquería</span></figure>
-    </div>
-  </header>
-
-  <hr class="rule">
-
-  <section id="pilares">
-    <div class="sec-head">
-      <div class="eyebrow">Por qué Velari</div>
-      <h2 class="gold-text">Aprende un oficio y conviértelo en tu negocio</h2>
-      <p class="lead">Un instituto pensado para que salgas a trabajar, o a emprender con lo que sabes hacer.</p>
-    </div>
-    <div class="pillars">
-      <article class="pillar"><span class="ico">1</span><h3>Formación de calidad</h3><p>Programas técnicos con docentes que te acompañan en cada etapa de tu aprendizaje.</p></article>
-      <article class="pillar"><span class="ico">2</span><h3>Práctica profesional</h3><p>Aprendes haciendo: el énfasis está en la práctica con técnicas y herramientas reales del oficio.</p></article>
-      <article class="pillar"><span class="ico">3</span><h3>Oportunidad de emprendimiento</h3><p>Tu talento puede ser tu propio ingreso: te orientamos para que saques provecho de lo que aprendes.</p></article>
+  <section class="s" id="programas">
+    <div class="head"><div class="eyebrow">Programas técnicos</div><h2>Elige tu <em>camino</em></h2></div>
+    <div class="progs">
+      <article class="prog"><img src="assets/manicure.jpg" alt="Manicura con uniforme azul rey" width="640" height="857" loading="lazy"><div class="b"><h3 class="gold">Manicure</h3><p>Cuidado y decoración de uñas con técnicas actuales y acabado profesional.</p><a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20programa%20de%20Manicure" target="_blank" rel="noopener">Quiero Manicure</a></div></article>
+      <article class="prog"><img src="assets/barberia.jpg" alt="Barbero con uniforme azul rey haciendo un degradado" width="640" height="857" loading="lazy"><div class="b"><h3 class="gold">Barbería</h3><p>Técnicas de corte y cuidado masculino, con práctica desde el comienzo.</p><a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20programa%20de%20Barber%C3%ADa" target="_blank" rel="noopener">Quiero Barbería</a></div></article>
+      <article class="prog"><img src="assets/peluqueria.jpg" alt="Estilista con uniforme azul rey peinando a una clienta" width="640" height="857" loading="lazy"><div class="b"><h3 class="gold">Peluquería</h3><p>Corte, peinado y cuidado del cabello para atender clientes con seguridad.</p><a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20programa%20de%20Peluquer%C3%ADa" target="_blank" rel="noopener">Quiero Peluquería</a></div></article>
     </div>
   </section>
 
-  <section id="programas">
-    <div class="sec-head">
-      <div class="eyebrow">Programas técnicos</div>
-      <h2 class="gold-text">Tres caminos para tu futuro</h2>
-    </div>
-    <div class="progs three">
-      <article class="prog">
-        <div class="prog-img"><img src="assets/hero-barberia.jpg" alt="Programa de Barbería" width="560" height="720" loading="lazy"></div>
-        <div class="prog-body">
-          <h3 class="gold-text">Barbería</h3>
-          <p>Técnicas de corte y cuidado masculino, con práctica desde el comienzo.</p>
-          <a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20programa%20de%20Barber%C3%ADa" target="_blank" rel="noopener">Quiero Barbería</a>
-        </div>
-      </article>
-      <article class="prog">
-        <div class="prog-img"><img src="assets/hero-unas.jpg" alt="Programa de Manicure" width="560" height="720" loading="lazy"></div>
-        <div class="prog-body">
-          <h3 class="gold-text">Manicure</h3>
-          <p>Cuidado y decoración de uñas con técnicas actuales y acabado profesional.</p>
-          <a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20programa%20de%20Manicure" target="_blank" rel="noopener">Quiero Manicure</a>
-        </div>
-      </article>
-      <article class="prog">
-        <div class="prog-img"><img src="assets/peluqueria.jpg" alt="Programa de Peluquería" width="560" height="720" loading="lazy"></div>
-        <div class="prog-body">
-          <h3 class="gold-text">Peluquería</h3>
-          <p>Corte, peinado y cuidado del cabello para atender clientes con seguridad.</p>
-          <a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20programa%20de%20Peluquer%C3%ADa" target="_blank" rel="noopener">Quiero Peluquería</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="empezar">
-    <div class="sec-head">
-      <div class="eyebrow">Cómo inscribirte</div>
-      <h2 class="gold-text">Empezar es sencillo</h2>
-    </div>
+  <section class="s" id="inscripcion">
+    <div class="head"><div class="eyebrow">Cómo inscribirte</div><h2>Empezar es <em>sencillo</em></h2></div>
     <div class="steps">
-      <div class="step"><div><h3>Escríbenos</h3><p>Cuéntanos qué programa te interesa por WhatsApp.</p></div></div>
-      <div class="step"><div><h3>Te asesoramos</h3><p>Te explicamos horarios, valores y requisitos para que elijas con claridad.</p></div></div>
-      <div class="step"><div><h3>Empieza tu formación</h3><p>Reserva tu cupo y comienza a construir tu futuro.</p></div></div>
+      <div class="step"><i>1</i><h3>Escríbenos</h3><p>Cuéntanos por WhatsApp qué programa te interesa.</p></div>
+      <div class="step"><i>2</i><h3>Te asesoramos</h3><p>Te explicamos horarios, valores y requisitos para que elijas con claridad.</p></div>
+      <div class="step"><i>3</i><h3>Empieza tu formación</h3><p>Reserva tu cupo y comienza a construir tu futuro.</p></div>
+    </div>
+    <div class="band">
+      <h2>Inscríbete <em>ahora</em></h2>
+      <div class="num gold">321 474 6140</div>
+      <a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20inscribirme%20en%20el%20Instituto%20de%20Belleza%20Velari" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
     </div>
   </section>
 
-  <section id="sede">
-    <div class="sec-head">
-      <div class="eyebrow">La sede</div>
-      <h2 class="gold-text">Visítanos en Ciudad Bolívar</h2>
-    </div>
-    <div class="info card-info">
-      <div class="row">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.100 7-11.500A7 7 0 0 0 5 9.500C5 14.900 12 21 12 21Z"/><circle cx="12" cy="9.500" r="2.500"/></svg>
-        <div><b>Dirección</b>Carrera 19D # 68-18 Sur<br>Ciudad Bolívar, Bogotá</div>
+  <section class="s" id="sede">
+    <div class="head"><div class="eyebrow">Encuéntranos</div><h2>Visítanos en <em>Ciudad Bolívar</em></h2></div>
+    <div class="sede">
+      <div class="card">
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.100 7-11.500A7 7 0 0 0 5 9.500C5 14.900 12 21 12 21Z"/><circle cx="12" cy="9.500" r="2.500"/></svg><div><b>Dirección</b>Carrera 19D # 68-18 Sur<br>San Francisco, Ciudad Bolívar, Bogotá</div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.800 7L4 20l1.200-4.600A8 8 0 1 1 21 12Z"/></svg><div><b>WhatsApp y teléfono</b>321 474 6140</div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Horarios</b>Escríbenos y te confirmamos el horario de atención y de clases.</div></div>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Carrera+19D+68-18+Sur+Bogot%C3%A1" target="_blank" rel="noopener">Abrir en Google Maps</a>
+          <a class="btn btn-line" href="https://wa.me/573214746140?text=Hola%2C%20%C2%BFme%20pueden%20indicar%20c%C3%B3mo%20llegar%20al%20Instituto%20de%20Belleza%20Velari%3F" target="_blank" rel="noopener">Pedir indicaciones</a>
+        </div>
       </div>
-      <div class="row">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.800 7L4 20l1.200-4.600A8 8 0 1 1 21 12Z"/></svg>
-        <div><b>WhatsApp y teléfono</b>321 474 6140</div>
+      <div class="socials">
+        <a class="social" href="https://www.instagram.com/institutovelari/" target="_blank" rel="noopener"><b>Instagram</b><span>@institutovelari</span></a>
+        <a class="social" href="https://www.facebook.com/profile.php?id=61575478437407" target="_blank" rel="noopener"><b>Facebook</b><span>Instituto de Belleza Velari</span></a>
       </div>
-      <div class="row">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <div><b>Horarios</b>Escríbenos y te confirmamos el horario de atención y de clases.</div>
-      </div>
-      <div class="cta-row" style="justify-content:flex-start;margin:6px 0 0">
-        <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Carrera+19D+68-18+Sur+Bogot%C3%A1" target="_blank" rel="noopener">Abrir en Google Maps</a>
-        <a class="btn btn-line" href="https://wa.me/573214746140?text=Hola%2C%20%C2%BFme%20pueden%20indicar%20c%C3%B3mo%20llegar%20al%20Instituto%20de%20Belleza%20Velari%3F" target="_blank" rel="noopener">Pedir indicaciones</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="redes">
-    <div class="sec-head">
-      <div class="eyebrow">Síguenos</div>
-      <h2 class="gold-text">Mira cómo se vive el Instituto</h2>
-    </div>
-    <div class="socials">
-      <a class="social" href="https://www.instagram.com/institutovelari/" target="_blank" rel="noopener"><b>Instagram</b><span>@institutovelari</span></a>
-      <a class="social" href="https://www.facebook.com/profile.php?id=61575478437407" target="_blank" rel="noopener"><b>Facebook</b><span>Instituto de Belleza Velari</span></a>
     </div>
   </section>
 
   <footer>
-    <img class="f-logo" src="assets/logo.png" alt="Velari" width="150" height="136" loading="lazy">
-    <p><b style="color:var(--gold-hi)">Instituto de Belleza Velari</b></p>
+    <img src="assets/emblema.png" alt="Escudo del Instituto de Belleza Velari" width="84" height="84" loading="lazy">
+    <p><b>Instituto de Belleza Velari</b></p>
     <p>Carrera 19D # 68-18 Sur · Ciudad Bolívar, Bogotá, Colombia</p>
   </footer>
 </div>
@@ -301,3 +223,5 @@ footer p{margin:4px 0}
 <div class="dock">
   <a class="btn btn-gold" href="https://wa.me/573214746140?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20inscribirme%20en%20el%20Instituto%20de%20Belleza%20Velari" target="_blank" rel="noopener">Inscríbete por WhatsApp</a>
 </div>
+</body>
+</html>
